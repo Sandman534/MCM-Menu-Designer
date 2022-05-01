@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AAB0665E-6B60-4282-B499-49E05647F42B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MCMHelper_MenuDesigner</RootNamespace>
+    <AssemblyName>MCMHelper_MenuDesigner</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\skyrim.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColorPicker\AdobeColors.cs" />
+    <Compile Include="ColorPicker\ctrl2DColorBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\ctrlVerticalColorSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorPicker\frmColorPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JsonHotkey.cs" />
+    <Compile Include="JsonConfig.cs" />
+    <Compile Include="JSONWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JSONWindow.Designer.cs">
+      <DependentUpon>JSONWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupWindowTranslationAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupWindowTranslationAdd.Designer.cs">
+      <DependentUpon>PopupWindowTranslationAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupWindowTranslations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupWindowTranslations.Designer.cs">
+      <DependentUpon>PopupWindowTranslations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupWindowAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupWindowAbout.Designer.cs">
+      <DependentUpon>PopupWindowAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupWindowMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupWindowMenu.Designer.cs">
+      <DependentUpon>PopupWindowMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupWindowValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupWindowValue.Designer.cs">
+      <DependentUpon>PopupWindowValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopupWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopupWindow.Designer.cs">
+      <DependentUpon>PopupWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ColorPicker\ctrl2DColorBox.resx">
+      <DependentUpon>ctrl2DColorBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorPicker\ctrlVerticalColorSlider.resx">
+      <DependentUpon>ctrlVerticalColorSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColorPicker\frmColorPicker.resx">
+      <DependentUpon>frmColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JSONWindow.resx">
+      <DependentUpon>JSONWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupWindowTranslationAdd.resx">
+      <DependentUpon>PopupWindowTranslationAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupWindowTranslations.resx">
+      <DependentUpon>PopupWindowTranslations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupWindowAbout.resx">
+      <DependentUpon>PopupWindowAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupWindowMenu.resx">
+      <DependentUpon>PopupWindowMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupWindowValue.resx">
+      <DependentUpon>PopupWindowValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopupWindow.resx">
+      <DependentUpon>PopupWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skyrim.ico" />
+    <None Include="Resources\upload.png" />
+    <None Include="Resources\up.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\down.png" />
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
